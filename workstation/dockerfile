@@ -1,4 +1,4 @@
-FROM fedora:29
+FROM fedora:29 
 RUN dnf update --refresh -y && \
     dnf install\
     git\ 
