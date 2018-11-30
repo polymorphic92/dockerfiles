@@ -1,4 +1,5 @@
-FROM fedora:29 
+FROM fedora:29
+COPY ./setup-dotfiles /root/setup-dotfiles 
 RUN dnf update --refresh -y && \
     dnf install\
     git\ 
@@ -12,5 +13,3 @@ RUN dnf update --refresh -y && \
     zsh\
     fish -y 
 CMD "bash"
-
-
