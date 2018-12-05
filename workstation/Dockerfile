@@ -1,7 +1,10 @@
 FROM fedora:29
-COPY ./setup-dotfiles /root/setup-dotfiles 
+WORKDIR /root
+
+COPY . /root
 RUN dnf update --refresh -y && \
     dnf install\
+    flatpack\ 
     git\ 
     vim\ 
     ranger\ 
@@ -11,5 +14,6 @@ RUN dnf update --refresh -y && \
     python3\
     ansible\
     zsh\
+    stow\
     fish -y 
 CMD "bash"

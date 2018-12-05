@@ -1,6 +1,9 @@
 #!/bin/bash
- 
-git clone --bare https://bitbucket.org/durdn/cfg.git $HOME/.cfg
+
+rm -f $HOME/.bashrc
+rm -f $HOME/.bash_profile
+
+git clone --bare https://github.com/polymorphic92/dotfiles.git $HOME/.cfg
 function config {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
